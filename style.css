@@ -1,0 +1,151 @@
+/* Font Faces */
+@font-face {
+    font-family: 'Figtree ExtraBold';
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: bold; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree SemiBold';
+    src: url('./assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Adjust if necessary */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree Italic';
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Figtree Variable';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Root Variables */
+:root {
+    --clr-gray-500: hsl(0, 0%, 42%);
+    --clr-gray-950: hsl(0, 0%, 7%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-yellow: hsl(47, 88%, 63%);
+}
+
+/* General Resets and Utilities */
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--clr-yellow);
+    display: grid;
+    line-height: 1.5;
+    min-height: 100vh;
+    place-items: center;
+}
+
+/* Layout Styles */
+.article-card {
+
+    align-items: center;  
+    background: var(--clr-white);
+    border-radius: 2rem;
+    border: 1px solid var(--clr-gray-950);
+    box-shadow: 5px 5px 0 var(--clr-gray-950);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    max-width: 32.7rem;
+    padding: 2.4rem;
+    transition: transform 500ms ease;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-image {
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* Component Styles */
+.article-content {
+    gap: 8px;
+    line-height: 1.5;
+    margin-top: 2.4rem;
+}
+
+.article-status {
+    background: var(--clr-yellow);
+    border-radius: 0.4rem;
+    color: var(--clr-gray-950);
+    display: inline-block;
+    font-family: 'Figtree ExtraBold';
+    padding: 0.5rem 1.2rem;
+}
+
+.article-content p {
+    color: var(--clr-gray-950);
+    font-family: 'Figtree SemiBold';
+    font-size: 1.2rem;
+}
+
+.article-summary h2 {
+
+    color: var(--clr-gray-950);
+    cursor: pointer;
+    font-family: 'Figtree ExtraBold';
+    font-size: 2rem;
+    transition: 500ms ease;
+}
+
+.article-summary h2:hover {
+    color: var(--clr-yellow);
+}
+
+.article-summary p {
+    color: var(--clr-gray-500);
+    font-family: 'Figtree SemiBold';
+    font-size: 1.4rem;
+}
+
+.author-profile-figure {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    margin-left: 0;
+}
+
+.author-profile-figure img {
+    width: 25%;
+}
+
+.author-profile-figure figcaption {
+    font-family: 'Figtree ExtraBold';
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+
+/* Responsive Styles for Desktop */
+@media screen and (min-width: 1440px) {
+    .article-card {
+        max-width: 38.7rem; 
+    }
+}
